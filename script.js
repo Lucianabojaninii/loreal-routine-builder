@@ -4,7 +4,7 @@
 
 /* ---------- 1. Settings ---------- */
 // 👉 Paste YOUR Cloudflare Worker URL here (the same one from Project 8)
-const WORKER_URL = "https://YOUR-WORKER-NAME.YOUR-SUBDOMAIN.workers.dev/";
+const WORKER_URL = "https://loreal-chatbot.lbojaniniriascos.workers.dev/";
 
 const STORAGE_KEY = "loreal-selected-products";
 const DIR_KEY = "loreal-text-direction";
