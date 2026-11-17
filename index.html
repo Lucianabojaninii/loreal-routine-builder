@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'Oréal | Smart Routine &amp; Product Advisor</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome icons (from the starter) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="img/loreal-logo.png" alt="L'Oréal logo" class="logo" />
+        <span class="brand-tag">Smart Routine &amp; Product Advisor</span>
+      </div>
+      <!-- LevelUp: RTL toggle -->
+      <button id="dirToggle" class="ghost-btn" type="button" aria-pressed="false">
+        RTL
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ===== Intro ===== -->
+    <section class="intro">
+      <p class="eyebrow">Because you're worth it</p>
+      <h1>Build your personalized routine</h1>
+      <p>
+        Browse products from the L'Oréal family of brands, select the ones you
+        love, and let our AI beauty advisor build a routine just for you.
+      </p>
+    </section>
+
+    <!-- ===== Filters (category + LevelUp: search) ===== -->
+    <section class="controls" aria-label="Filter products">
+      <div class="field">
+        <label for="categoryFilter">Category</label>
+        <select id="categoryFilter">
+          <option value="all">All categories</option>
+        </select>
+      </div>
+      <div class="field grow">
+        <label for="productSearch">Search</label>
+        <input
+          type="search"
+          id="productSearch"
+          placeholder="Search by name, brand, or keyword…"
+          autocomplete="off"
+        />
+      </div>
+    </section>
+
+    <p id="resultsCount" class="results-count" aria-live="polite"></p>
+
+    <!-- ===== Product grid ===== -->
+    <section id="productsContainer" class="products-grid" aria-label="Products">
+      <div class="placeholder-message">Loading products…</div>
+    </section>
+
+    <!-- ===== Selected products ===== -->
+    <section class="selected-products" aria-labelledby="selectedHeading">
+      <div class="section-head">
+        <h2 id="selectedHeading">
+          Selected Products <span id="selectedCount" class="count-badge">0</span>
+        </h2>
+        <button id="clearAll" class="text-btn" type="button">Clear all</button>
+      </div>
+      <div id="selectedProductsList" class="selected-list"></div>
+      <button id="generateRoutine" class="primary-btn generate-btn" type="button">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Routine
+      </button>
+    </section>
+
+    <!-- ===== Chat ===== -->
+    <section class="chatbox" aria-labelledby="chatHeading">
+      <h2 id="chatHeading">Your Beauty Advisor</h2>
+      <div id="chatWindow" class="chat-window" aria-live="polite"></div>
+      <form id="chatForm" class="chat-form">
+        <label for="userInput" class="visually-hidden">Ask a question</label>
+        <input
+          id="userInput"
+          type="text"
+          placeholder="Ask about your routine, skincare, haircare, makeup…"
+          autocomplete="off"
+        />
+        <button id="sendBtn" type="submit" class="primary-btn send-btn">
+          <i class="fa-solid fa-paper-plane"></i> Send
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 L'Oréal. All rights reserved.</p>
+    <nav>
+      <!-- These URLs are placeholders -->
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Contact</a>
+    </nav>
+    <p class="footer-note">Student project for a web design course.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
